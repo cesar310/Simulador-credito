@@ -1,0 +1,26 @@
+<div class="tutorial-container">
+    <div class="header">
+      <app-titulo [titulo]="titulo"></app-titulo>
+    </div>
+    <div class="content">
+      <h2>Cómo usar el simulador de crédito</h2>
+  
+      <app-tarjeta-tutorial 
+        [titulo]="'1. Ingreso de datos básicos'"
+        [parrafos]="parrafosIngreso">
+      </app-tarjeta-tutorial>
+  
+      <app-tarjeta-tutorial 
+        [titulo]="'2. Visualización de resultados'"
+        [parrafos]="parrafosVisualizacion"
+        [subparrafos]="subparrafosVisualizacion">
+      </app-tarjeta-tutorial>
+  
+      <app-tarjeta-tutorial 
+        [titulo]="'3. Interpretación de la gráfica'"
+        [parrafos]="parrafosInterpretacion">
+      </app-tarjeta-tutorial>
+  
+      <app-boton [ruta]="rutaBotonSimulador" [texto]="textoBotonSimulador"/>
+    </div>
+  </div>

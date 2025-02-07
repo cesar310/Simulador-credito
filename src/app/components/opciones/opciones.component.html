@@ -1,0 +1,27 @@
+
+<h3>Parametriza tu credito</h3>
+
+<div>
+    <!-- Monto de credito -->
+    <app-campo-ingreso [nombre]="nombreMontoCredito" [valor]="montoDefault" (valorChange)="onInresoMonto($event)"/>
+    <br>
+
+    <!-- Tipo de tasa -->
+    <app-selector [nombre]="selectorTasaNombre" [opciones]="tasasDisponibles" (seleccion)="onSeleccion($event)"/>
+    <br>
+
+    <!-- Tasa -->
+    <app-campo-ingreso [nombre]="nombreTasaCredito" [valor]="tasaDefault" (valorChange)="onIngresoTasa($event)"/>
+    <br>
+
+    <!-- Plazo del credito -->
+    <app-campo-ingreso [nombre]="nombrePlazoCredito" [valor]="plazoDefault" (valorChange)="onIngresoPlazo($event)"/>
+
+    <button (click)="mostrarClick()">Actualizar Gráfica</button>
+
+    <br>
+    
+    <app-boton [ruta]="rutaBotonTutorial" [texto]="textoBotonTutorial"/>
+
+</div>
+

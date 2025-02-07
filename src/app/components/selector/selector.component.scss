@@ -1,0 +1,22 @@
+// src/app/components/selector/selector.component.scss
+.select-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+  }
+}

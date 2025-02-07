@@ -1,0 +1,13 @@
+// src/app/components/campo-ingreso/campo-ingreso.component.scss
+.input-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    width: 100%;
+  }
+}

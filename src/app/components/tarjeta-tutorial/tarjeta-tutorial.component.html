@@ -1,0 +1,9 @@
+<section>
+  <app-titulo-tutorial [titulo]="titulo"></app-titulo-tutorial>
+  <ul>
+      <app-parrafo-tutorial *ngFor="let parrafo of parrafos" [texto]="parrafo"></app-parrafo-tutorial>
+      <ul *ngIf="subparrafos.length > 0">
+          <app-parrafo-tutorial *ngFor="let subparrafo of subparrafos" [texto]="subparrafo"></app-parrafo-tutorial>
+      </ul>
+  </ul>
+</section>

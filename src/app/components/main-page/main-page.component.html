@@ -1,0 +1,19 @@
+
+<div class="main-container">
+  <div class="header">
+    <app-titulo [titulo]="titulo"></app-titulo>
+  </div>
+  <div class="opciones">
+    <app-opciones (mostrarGrafica)="mostrar($event)"></app-opciones>
+  </div>
+  <div class="grafica" [hidden]="!mostrarGrafica">
+    <app-grafica></app-grafica>
+  </div>
+  <div class="informacion" [hidden]="!mostrarGrafica">
+    <app-informacion></app-informacion>
+  </div>
+  <div clas = "noGrafica" [hidden]="mostrarGrafica">
+    <app-no-grafica></app-no-grafica>
+  </div>
+
+</div>

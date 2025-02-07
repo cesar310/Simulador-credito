@@ -1,0 +1,10 @@
+
+<div>
+    <label>{{nombre}}:
+    <select (change)="onSeleccionar($event)">
+        @for (opcion of opciones; track $index) {
+            <option value={{opcion}}>{{opcion}}</option>
+        }
+        </select>
+    </label>
+</div>
