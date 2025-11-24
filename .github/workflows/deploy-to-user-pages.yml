@@ -1,0 +1,32 @@
+name: Deploy to user GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (production, base href root)
+        run: npx ng build --configuration production --base-href /
+
+      - name: Deploy to user pages repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PAGES_REPO_TOKEN }}
+          publish_dir: ./dist/curso-bigote-angular/browser
+          publish_branch: main
+          external_repository: cesar310/cesar310.github.io
+          commit_message: "Auto-deploy: build from Simulador-credito"
